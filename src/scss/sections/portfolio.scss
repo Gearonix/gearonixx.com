@@ -1,11 +1,14 @@
+@use './../globals' as *;
 
 .portfolio { padding-block-end: 0; }
 
 .portfolio .section-title { margin-block-end: 90px; }
 
+
 .portfolio-card {
   position: relative;
   margin-block-end: 50px;
+  width: 50%;
 }
 
 .portfolio-card :is(.card-content, .btn-icon) {
@@ -44,10 +47,105 @@
   background-color: white !important;
 }
 
+.portfolio-wrapper{
+  @include flex;
 
-.card-image{
-  width: 60%;
-  img{
-  border-radius: 6px;
+  width: 100%;
+  gap: 50px;
+}
+
+.portfolio-card.adonis-ecommerce{
+  background-image: url('img/adonis-ecommerce.png');
+}
+
+.portfolio-card.space-calendar{
+  background-image: url('img/space-calendar.png');
+
+}
+
+.portfolio-card{
+  transition: var(--cubic-out) 0.3s;
+  cursor: pointer;
+  height: 390px;
+  background-size: cover;
+  border-radius: 3px;
+
+  &:hover{
+    transform: scale(0.93);
+
+    .card-image-background{
+      opacity: 0.5;
+    }
+
+    .card-text{
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    .card-github{
+      transform: translate(0);
+      opacity: 0.9;
+      img{
+        @include size;
+      }
+    }
   }
+}
+
+.card-image-background{
+  @include absolute;
+  @include size;
+
+  background-color: black;
+  opacity: 0;
+  transition: var(--cubic-out) 0.5s;
+  border-radius: 6px;
+}
+
+.card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: max-content;
+  opacity: 0;
+  transform: translate(-70%, -50%);
+  transition: var(--cubic-out) 0.3s;
+  z-index: 1;
+  color: var(--smokey-black);
+  font-family: var(--ff-recoleta);
+
+
+  h3{
+    font-weight: var(--fw-300);
+    font-size: 2em;
+  }
+
+  p{
+    font-weight: var(--fw-300);
+    font-size: 1.5em;
+  }
+}
+
+.card-github{
+  border-radius: 100%;
+  width: 53px;
+  height: 53px;
+  background: white;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  overflow: hidden;
+
+  @include flex-center;
+
+  transition: var(--cubic-out) 0.3s;
+  opacity: 0;
+  transform: translate(20%);
+
+  a{
+    @include flex-center;
+    @include size(85%, 85%);
+  }
+
 }

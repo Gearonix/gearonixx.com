@@ -41,6 +41,5 @@ document.body.addEventListener('mouseout', function() {
 
 // remove diabled class on cursorElement, when mouse in the body
 document.body.addEventListener('mouseover', function() {
-  console.log('test')
   cursor.classList.remove('disabled')
 })
