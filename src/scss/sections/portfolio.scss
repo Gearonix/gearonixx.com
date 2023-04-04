@@ -1,7 +1,7 @@
 
-.portfolio { padding-block-end: 100px; }
+.portfolio { padding-block-end: 0; }
 
-.portfolio .section-title { margin-block-end: 60px; }
+.portfolio .section-title { margin-block-end: 90px; }
 
 .portfolio-card {
   position: relative;
@@ -40,4 +40,14 @@
 .portfolio-card .card-title:is(:hover, :focus) { text-decoration: underline; }
 
 
+.btn-icon{
+  background-color: white !important;
+}
 
+
+.card-image{
+  width: 60%;
+  img{
+  border-radius: 6px;
+  }
+}

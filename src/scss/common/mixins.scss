@@ -1,0 +1,12 @@
+@mixin icon-button($fz: 24px){
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white_a80);
+  cursor: pointer;
+  height: max-content;
+
+  span{
+    font-size: $fz;
+  }
+}

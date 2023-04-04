@@ -22,7 +22,7 @@ const serve = () => {
 
   gulp
       .watch(`${paths.src}/**`, build)
-      .on('change', () => setTimeout(sync.reload, 400))
+      .on('change', () => setTimeout(sync.reload, 700))
 }
 
 

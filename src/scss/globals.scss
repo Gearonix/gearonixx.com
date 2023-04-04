@@ -1,25 +1,25 @@
-//@import '~normalize.css/normalize.css';
-//$material-icons-font-path: 'material-icons/';
-//@import '~material-icons/iconfont/material-icons';
-
+@import '~normalize.css/normalize.css';
+$material-icons-font-path: 'material-icons/';
+@import '~material-icons/iconfont/material-icons';
+@import "common/mixins";
 
 :root {
-  --smokey-black: hsl(0, 0%, 7%);
-  --eerie-black: hsl(0, 0%, 9%);
-  --radical-red: hsl(346, 100%, 58%);
-  --white_a9: hsla(0, 0%, 100%, 0.09);
-  --white_a15: hsla(0, 0%, 100%, 0.15);
-  --white_a25: hsla(0, 0%, 100%, 0.25);
-  --white_a50: hsla(0, 0%, 100%, 0.5);
-  --white_a70: hsla(0, 0%, 100%, 0.7);
-  --white_a75: hsla(0, 0%, 100%, 0.75);
-  --white_a80: hsla(0, 0%, 100%, 0.8);
-  --jet-1: hsl(0, 0%, 20%);
-  --jet-2: hsl(0, 0%, 16%);
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 0%);
+  --smokey-black: #EDEDED;
+  --eerie-black: #E8E8E8;
+  --radical-red: #00D6A4;
+  --white_a9: #000000;
+  --white_a15: #000000;
+  --white_a25: #626262;
+  --white_a50: #000000;
+  --white_a70: #000000;
+  --white_a75: #000000;
+  --white_a80: #000000;
+  --jet-1: #CCCCCC;
+  --jet-2: #D6D6D6;
+  --white: #000;
+  --black: #fff;
   --gradient-1: linear-gradient(180deg, transparent, var(--smokey-black));
-  --gradient-2: linear-gradient(180deg,var(--smokey-black) 25%,hsla(0, 0%, 0%, 0.6) 80%);
+  --gradient-2: linear-gradient(180deg,var(--smokey-black) 25%,#fff 80%);
   --ff-recoleta: "Recoleta", serif;
   --ff-gordita: "Gordita", sans-serif;
 
@@ -103,6 +103,7 @@ body {
   font-size: 1.6rem;
   font-weight: var(--fw-400);
   line-height: 2.15;
+
   overflow-x: hidden;
 }
 
@@ -175,7 +176,6 @@ body.active { overflow: hidden; }
   left: 0;
   width: 100%;
   height: 50%;
-  background-image: var(--gradient-1);
 }
 
 .img-cover {
@@ -248,14 +248,4 @@ body.active { overflow: hidden; }
 }
 
 .back-top-btn:hover { color: var(--white); }
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM CURSOR
-\*-----------------------------------*/
-
-.cursor { display: none; }
 

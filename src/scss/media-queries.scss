@@ -131,6 +131,7 @@
     transform: translateY(-50%);
     max-width: 200px;
     z-index: -1;
+    border-radius: 100%;
   }
   .hero .shape { display: none; }
   .gallery { padding-block-end: 140px; }
@@ -220,8 +221,8 @@
   }
 
   .portfolio {
-    padding-block-end: 150px;
-    margin-block-end: 60px;
+    padding-block-end: 0px;
+    margin-block-end: 0px;
   }
 
   .portfolio .shape {
@@ -272,13 +273,13 @@
     left: 0;
     width: 75px;
     height: 75px;
-    background-color: var(--white);
     mix-blend-mode: exclusion;
     border-radius: var(--radius-circle);
     transform: translate(-50%, -50%) scale(0.35);
     transition: transform 0.35s;
     pointer-events: none;
     z-index: 6;
+    background-color: white;
   }
   .cursor.hovered { transform: translate(-50%, -50%) scale(1.2); }
   .cursor.disabled { transform: translate(-50%, -50%) scale(0); }
@@ -357,6 +358,10 @@
     right: 50px;
     opacity: 0;
     transition: var(--transition-2);
+    background-color: white;
+  }
+  .btn-icon{
+    background-color: white;
   }
   .portfolio-card .btn-icon svg { width: 25px; }
   .portfolio-card:is(:hover, :focus-within) .btn-icon { opacity: 1; }

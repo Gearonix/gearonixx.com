@@ -1,3 +1,5 @@
+@use './../globals' as *;
+
 
 .header {
   position: fixed;
@@ -7,6 +9,10 @@
   padding-block: 18px;
   transition: var(--transition-2);
   z-index: 4;
+}
+
+.nav-open-btn{
+  @include icon-button(32px);
 }
 
 .header.active {

@@ -8,6 +8,7 @@
   max-width: 150px;
   margin-inline: auto;
   margin-block-end: 20px;
+  border-radius: 100%;
 }
 
 .hero .wrapper {
@@ -22,7 +23,6 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
   font-weight: inherit;
   display: flex;
 }
@@ -32,6 +32,7 @@
   font-weight: var(--fw-300);
   text-transform: uppercase;
   letter-spacing: 5px;
+  color: var(--white_a25);
 }
 
 .hero .wrapper .space { padding: 0.1em; }
