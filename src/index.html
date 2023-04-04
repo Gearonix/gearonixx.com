@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel='stylesheet' href="scss/style.scss">
-    <link rel='stylesheet' href="index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard Ryan</title>
+  <meta name="title" content="Richard Ryan">
+  <meta name="description" content="This is a photographer portfolio html template, made by codewithsadee.">
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="font/font.css">
 </head>
-<body>
-    test
-    <script src="index.js"></script>
+
+<body class="active" id="top">
+  @@include('html/preloader.html')
+  @@include('html/header.html')
+  <main>
+    <article>
+      @@include('html/main.html')
+    </article>
+  </main>
+  @@include('html/about.html')
+  @@include('html/portfolio.html')
+  @@include('html/footer.html')
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>0%</a>
+
+  <div class="cursor" data-cursor></div>
+
+  <script src="index.js"></script>
 </body>
 </html>

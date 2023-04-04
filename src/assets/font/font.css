@@ -1,16 +1,10 @@
-/*-----------------------------------*\
-  #style.scss
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
 
 
 
-/**
- * RECOLETA FONT
- */
+
+
+
+
 
 @font-face {
   font-family: 'Recoleta';
@@ -32,9 +26,7 @@
 
 
 
-/**
- * GORDITA FONT
- */
+
 
 @font-face {
   font-family: 'Gordita';
