@@ -12,7 +12,31 @@
 }
 
 .nav-open-btn{
-  @include icon-button(32px);
+  @include icon-button(33px);
+
+  height: 32px;
+}
+
+.navbar-buttons{
+  @include flex;
+
+  gap: 25px;
+}
+
+.nav-icon-btn{
+  @include size(32px, 32px);
+  transition: var(--transition-1) 0.2s;
+
+  img{
+    @include size(90%, 90%);
+  }
+
+  a{
+    position: absolute;
+  }
+  &:hover{
+    transform: scale(1.12);
+  }
 }
 
 .header.active {
@@ -57,7 +81,7 @@
 }
 
 .nav-close-btn .span {
-  background-color: var(--white_a80);
+  background-color: var(--white-a80);
   width: 25px;
   height: 3px;
   border-radius: 5px;
@@ -108,7 +132,7 @@
 }
 
 .navbar-text {
-  color: var(--white_a75);
+  color: var(--white-a75);
   font-weight: var(--fw-300);
   line-height: 1.6;
   margin-block-end: 15px;
@@ -125,7 +149,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--black);
+  background-color: black;
   z-index: 1;
   transition: var(--transition-1);
   opacity: 0;
@@ -133,6 +157,6 @@
 }
 
 .overlay.active {
-  opacity: 0.75;
+  opacity: 0.65;
   pointer-events: all;
 }

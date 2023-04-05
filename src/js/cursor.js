@@ -13,11 +13,10 @@ const buttons = document.querySelectorAll('button')
 // change cursorElement position based on cursor move
 document.body.addEventListener('mousemove', function(event) {
   setTimeout(function() {
-    cursor.style.top = `${event.clientY}px`
+    cursor.style.top = `${event.clientY + window.Scrollbar.getAll()[0].offset.y}px`
     cursor.style.left = `${event.clientX}px`
   }, 100)
 })
-
 // add cursor hoverd class
 const hoverActive = function() {
   cursor.classList.add('hovered')

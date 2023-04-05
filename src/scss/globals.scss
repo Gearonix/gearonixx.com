@@ -1,20 +1,22 @@
 @import '~normalize.css/normalize.css';
+
 $material-icons-font-path: 'material-icons/';
+
 @import '~material-icons/iconfont/material-icons';
 @import "common/mixins";
 
 :root {
-  --smokey-black: #EDEDED;
-  --eerie-black: #E8E8E8;
+  --smokey-black: #fdfdfd;
+  --eerie-black: #fff;
   --radical-red: #00D6A4;
-  --white_a9: #000000;
-  --white_a15: #000000;
-  --white_a25: #626262;
-  --white_a50: #000000;
-  --white_a70: #000000;
-  --white_a75: #000000;
-  --white_a80: #000000;
-  --jet-1: #CCCCCC;
+  --white-a9: #000;
+  --white-a15: #000;
+  --white-a25: #626262;
+  --white-a50: #9f9f9f;
+  --white-a70: #000;
+  --white-a75: #000;
+  --white-a80: #e1e1e1;
+  --jet-1: #CCC;
   --jet-2: #D6D6D6;
   --white: #000;
   --black: #fff;
@@ -22,7 +24,6 @@ $material-icons-font-path: 'material-icons/';
   --gradient-2: linear-gradient(180deg,var(--smokey-black) 25%,#fff 80%);
   --ff-recoleta: "Recoleta", serif;
   --ff-gordita: "Gordita", sans-serif;
-
   --fs-1: 6rem;
   --fs-2: 5rem;
   --fs-3: 3.8rem;
@@ -34,20 +35,14 @@ $material-icons-font-path: 'material-icons/';
   --fs-9: 1.5rem;
   --fs-10: 1.4rem;
   --fs-11: 1.2rem;
-
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
-
   --section-padding: 60px;
-
-
-  --shadow: 0 12px 30px -10px hsla(0, 0%, 14%, 0.1);
-
+  --shadow: 0 12px 30px -10px hsl(0deg 0% 14% / 10%);
   --radius-circle: 50%;
   --radius-5: 5px;
   --radius-25: 25px;
-
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease;
   --transition-3: 1s ease;
@@ -103,7 +98,6 @@ body {
   font-size: 1.6rem;
   font-weight: var(--fw-400);
   line-height: 2.15;
-
   overflow-x: hidden;
 }
 
@@ -203,7 +197,7 @@ body.active { overflow: hidden; }
 }
 
 .section-subtitle {
-  color: var(--white_a25);
+  color: var(--white-a25);
   font-size: var(--fs-7);
   text-transform: uppercase;
   letter-spacing: 3.5px;
@@ -231,7 +225,7 @@ body.active { overflow: hidden; }
   right: -70px;
   width: 70px;
   height: 70px;
-  border: 1px dashed currentColor;
+  border: 1px dashed currentcolor;
   color: var(--radical-red);
   font-size: var(--fs-11);
   border-radius: var(--radius-circle);
@@ -249,3 +243,18 @@ body.active { overflow: hidden; }
 
 .back-top-btn:hover { color: var(--white); }
 
+.section-description{
+  font-size: var(--fs-5);
+  color: var(--white-a25);
+  font-weight: var(--fw-300);
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.scrollbar-track{
+  display: none !important;
+}

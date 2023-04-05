@@ -7,8 +7,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "gulp"
   },
   "devDependencies": {
     "@types/gulp": "^4.0.10",
@@ -34,6 +33,7 @@
     "gulp": "^4.0.2",
     "material-icons": "^1.13.4",
     "normalize.css": "^8.0.1",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "smooth-scrollbar": "^8.8.3"
   }
 }

@@ -1,8 +1,16 @@
 @use './../globals' as *;
 
-.portfolio { padding-block-end: 0; }
+.portfolio {
+  padding-block-end: 0;
+}
+.portfolio .container{
 
-.portfolio .section-title { margin-block-end: 90px; }
+}
+
+.portfolio .section-description {
+  margin-block-end: 55px;
+  margin-top: 20px;
+}
 
 
 .portfolio-card {
@@ -24,7 +32,7 @@
 }
 
 .portfolio-card .card-tag {
-  color: var(--white_a70);
+  color: var(--white-a70);
   font-weight: var(--fw-300);
 }
 
@@ -49,7 +57,6 @@
 
 .portfolio-wrapper{
   @include flex;
-
   width: 100%;
   gap: 50px;
 }

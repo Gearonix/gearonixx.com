@@ -2,7 +2,9 @@ const revealElements = document.querySelectorAll('[data-reveal]')
 
 const scrollReveal = function() {
   for (let i = 0; i < revealElements.length; i++) {
-    const elementIsInScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.15
+    revealElements[i].classList.add('revealed')
+
+    const elementIsInScreen = revealElements[i].getBoundingClientRect().top < window.innerHeight / 1.40
 
     if (elementIsInScreen) {
       revealElements[i].classList.add('revealed')
@@ -11,7 +13,10 @@ const scrollReveal = function() {
     }
   }
 }
-
-window.addEventListener('scroll', scrollReveal)
-
 scrollReveal()
+
+window.addEventListener('wheel', scrollReveal)
+
+window.addEventListener('scroll', () => {
+  console.log('scroll')
+})

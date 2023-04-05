@@ -7,6 +7,11 @@ const [navTogglers, navLinks, navbar, overlay] = [
 ]
 
 const toggleNav = function() {
+  if (!navbar.classList.contains('active')) {
+    window.Scrollbar.destroy(document.querySelector('#root'))
+  } else {
+    initScrollbar()
+  }
   navbar.classList.toggle('active')
   overlay.classList.toggle('active')
   document.body.classList.toggle('active')
