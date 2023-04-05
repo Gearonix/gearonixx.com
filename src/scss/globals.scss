@@ -8,7 +8,7 @@ $material-icons-font-path: 'material-icons/';
 :root {
   --smokey-black: #fdfdfd;
   --eerie-black: #fff;
-  --radical-red: #00D6A4;
+  --radical-red: #ff295b;
   --white-a9: #000;
   --white-a15: #000;
   --white-a25: #626262;
@@ -231,14 +231,13 @@ body.active { overflow: hidden; }
   border-radius: var(--radius-circle);
   display: grid;
   place-items: center;
-  visibility: hidden;
-  transition: var(--transition-2);
+  opacity: 0;
+  transition: opacity var(--transition-2);
   z-index: 3;
 }
 
 .back-top-btn.show {
-  transform: translateX(-100px);
-  visibility: visible;
+  opacity: 1;
 }
 
 .back-top-btn:hover { color: var(--white); }

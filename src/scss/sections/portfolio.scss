@@ -3,6 +3,7 @@
 .portfolio {
   padding-block-end: 0;
 }
+
 .portfolio .container{
 
 }
@@ -57,6 +58,7 @@
 
 .portfolio-wrapper{
   @include flex;
+
   width: 100%;
   gap: 50px;
 }
@@ -92,6 +94,7 @@
     .card-github{
       transform: translate(0);
       opacity: 0.9;
+
       img{
         @include size;
       }

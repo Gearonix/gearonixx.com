@@ -5,7 +5,7 @@ const scrollReveal = function() {
     revealElements[i].classList.add('revealed')
 
     const elementIsInScreen = revealElements[i].getBoundingClientRect().
-        top < window.innerHeight / 1.15
+        top - 100 < window.innerHeight / 1.15
 
     if (elementIsInScreen) {
       revealElements[i].classList.add('revealed')

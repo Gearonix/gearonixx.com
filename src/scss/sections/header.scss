@@ -14,7 +14,6 @@
 
 .nav-open-btn{
   @include icon-button(33px);
-
   height: 32px;
 }
 
@@ -26,6 +25,7 @@
 
 .nav-icon-btn{
   @include size(32px, 32px);
+
   transition: var(--transition-1) 0.2s;
 
   img{
@@ -35,6 +35,7 @@
   a{
     position: absolute;
   }
+
   &:hover{
     transform: scale(1.12);
   }
