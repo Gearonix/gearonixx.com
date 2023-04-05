@@ -7,7 +7,8 @@
   left: 0;
   width: 100%;
   padding-block: 18px;
-  transition: var(--transition-2);
+  transition: padding-block var(--transition-2),
+  box-shadow var(--transition-2),background-color var(--transition-2);
   z-index: 4;
 }
 
