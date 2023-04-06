@@ -1,16 +1,19 @@
 
-const [navTogglers, navLinks, navbar, overlay] = [
+const [navTogglers, navLinks, navbar, overlay, header] = [
   document.querySelectorAll('[data-nav-toggler]'),
   document.querySelectorAll('[data-nav-link]'),
   document.querySelector('[data-navbar]'),
-  document.querySelector('[data-overlay]')
+  document.querySelector('[data-overlay]'),
+  document.querySelector('[data-header]')
 ]
 
 const toggleNav = function() {
   if (!navbar.classList.contains('active')) {
     window.Scrollbar.destroy(document.querySelector('#root'))
+    cursor.style.display = 'none'
   } else {
     initScrollbar()
+    cursor.style.display = 'block'
   }
   navbar.classList.toggle('active')
   overlay.classList.toggle('active')
@@ -23,6 +26,7 @@ const closeNav = function() {
   navbar.classList.remove('active')
   overlay.classList.remove('active')
   document.body.classList.remove('active')
+  cursor.style.display = 'block'
 }
 
 addEventOnElements(navLinks, 'click', closeNav)

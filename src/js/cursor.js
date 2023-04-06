@@ -9,13 +9,12 @@ const addEventOnElements = function(elements, eventType, callback) {
 const cursor = document.querySelector('[data-cursor]')
 const anchorElements = document.querySelectorAll('a')
 const buttons = document.querySelectorAll('button')
-const heroBanner = document.querySelector('.hero-banner')
 
 let currentClientY = 0
 let currentClientX = 0
 
 const angle = (cx, cy, ex, ey) => {
-  return Math.atan2(ey - cy, ex - cx) * 180 / Math.PI
+  return Math.floor(Math.atan2(ey - cy, ex - cx) * 180 / Math.PI) - 32
 }
 
 document.body.addEventListener('mousemove', function(e) {
@@ -27,14 +26,25 @@ document.body.addEventListener('mousemove', function(e) {
     }
     currentClientY = e.clientY
     currentClientX = e.clientX
-    const rekt = heroBanner.getBoundingClientRect()
+  }, 100)
+
+  for (const eye of document.querySelectorAll('[data-eye]')) {
+    const rekt = eye.getBoundingClientRect()
     const anchorX = rekt.left + rekt.width / 2
     const anthorY = rekt.top + rekt.height / 2
 
     const angleDeg = angle(currentClientX, currentClientY, anchorX, anthorY)
-    heroBanner.style.transform = `rotate(${angleDeg.toFixed(0)}deg)`
-  }, 100)
+    eye.style.transform = `rotate(${angleDeg}deg)`
+  }
 })
+for (const eye of document.querySelectorAll('[data-eye]')) {
+  eye.addEventListener('mouseover', () => {
+    eye.parentNode.classList.add('closed')
+  })
+  eye.addEventListener('mouseout', () => {
+    eye.parentNode.classList.remove('closed')
+  })
+}
 
 
 // add cursor hoverd class
@@ -53,12 +63,3 @@ addEventOnElements(anchorElements, 'mouseout', hoverDeactive)
 addEventOnElements(buttons, 'mouseover', hoverActive)
 addEventOnElements(buttons, 'mouseout', hoverDeactive)
 
-// add disabled class on cursorElement, when mouse out of body
-document.body.addEventListener('mouseout', function() {
-  cursor.classList.add('disabled')
-})
-
-// remove diabled class on cursorElement, when mouse in the body
-document.body.addEventListener('mouseover', function() {
-  cursor.classList.remove('disabled')
-})

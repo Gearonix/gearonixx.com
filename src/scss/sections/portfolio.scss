@@ -1,8 +1,149 @@
 @use './../globals' as *;
 
+@keyframes align-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .portfolio {
   padding-block-end: 0;
+
+  &__addon-1{
+    position: absolute;
+    left: 55px;
+    top: 10%;
+  }
+
+  &__addon-2{
+    position: absolute;
+    left: 38%;
+    top: 0;
+
+    img{
+      width: 256px;
+      height: 263px;
+    }
+
+    animation: float 6s ease-in-out infinite;
+
+  }
 }
+
+.portfolio-card-block{
+  width: 30%;
+  position: relative;
+
+  @include flex(stretch, flex-end, column);
+
+  .portfolio-card-subtitle{
+    font-family: var(--ff-recoleta);
+    font-size: 1.8rem;
+    color: var(--radical-red);
+  }
+
+  .portfolio-card-title{
+    font-size: 2.6rem;
+    margin-top: -10px;
+    font-weight: var(--fw-400);
+  }
+
+  .portfolio-card-description{
+    width: 500px;
+    height: max-content;
+    padding: 18px;
+    font-size: 1.7rem;
+    margin-top: 15px;
+    line-height: 1.4;
+    border-radius: 6px;
+    font-weight: var(--fw-400);
+    background: var(--eerie-black);
+    position: relative;
+    color: black;
+    box-shadow: 4px 4px 23px 0 rgb(34 60 80 / 20%);
+    transition: var(--transition-1) .1s;
+
+    &:hover{
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    em{
+      text-decoration: underline;
+    }
+
+    a{
+      position: absolute;
+    }
+  }
+
+  .portfolio-card-time{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    right: 14px;
+    bottom: 10px;
+
+    img{
+      @include size(20px, 20px);
+    }
+
+    span{
+      font-family: var(--ff-recoleta);
+    }
+  }
+
+  .portfolio-card-tags{
+    @include flex;
+
+    flex-wrap: wrap;
+    margin-top: 10px;
+    column-gap: 12px;
+    row-gap: -3px;
+    width: 490px;
+
+    span{
+      font-size: 1.65rem;
+    }
+  }
+
+  .portfolio-card-icons{
+    width: 100%;
+    height: 27px;
+    margin-top: 15px;
+
+    @include flex(flex-end);
+
+    gap: 20px;
+    margin-right: 20px;
+    animation: align-float 4s ease-in-out infinite;
+
+    img{
+      @include size(27px, 27px);
+
+      cursor: pointer;
+      transition: var(--cubic-out) 0.3s;
+
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+
+    a{
+      position: absolute;
+    }
+  }
+}
+
 
 .portfolio .container{
 
@@ -17,7 +158,7 @@
 .portfolio-card {
   position: relative;
   margin-block-end: 50px;
-  width: 50%;
+  width: 58%;
 }
 
 .portfolio-card :is(.card-content, .btn-icon) {
@@ -57,10 +198,17 @@
 }
 
 .portfolio-wrapper{
-  @include flex;
+  @include flex(space-between);
 
   width: 100%;
   gap: 50px;
+  margin: 75px auto 0;
+}
+
+.portfolio-wrapper.to-left{
+  .portfolio-card-block{
+    @include flex(streth, flex-start, column);
+  }
 }
 
 .portfolio-card.adonis-ecommerce{
@@ -69,18 +217,21 @@
 
 .portfolio-card.space-calendar{
   background-image: url('img/space-calendar.png');
+}
+
+.portfolio-card-description{
 
 }
 
 .portfolio-card{
-  transition: var(--cubic-out) 0.3s;
+  transition: var(--cubic-out) 0.15s;
   cursor: pointer;
-  height: 390px;
+  height: 488px;
   background-size: cover;
   border-radius: 3px;
 
   &:hover{
-    transform: scale(0.93);
+    transform: translate(0, 0) scale(0.93) !important;
 
     .card-image-background{
       opacity: 0.5;

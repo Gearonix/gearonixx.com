@@ -1,7 +1,11 @@
+@use './../globals' as *;
+
 .about .container {
   display: grid;
   gap: 45px;
 }
+
+
 
 .about .wrapper,
 .about-banner { padding-inline-start: 45px; }
@@ -31,7 +35,11 @@
   text-decoration: underline;
 }
 
-.about-banner { position: relative; }
+.about-banner {
+  position: relative;
+  margin-top: 60px;
+  animation: float 6s ease-in-out infinite;
+}
 
 .about .shape-1 {
   display: block;

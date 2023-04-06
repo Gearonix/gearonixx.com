@@ -34,15 +34,23 @@
     margin-top: 20px;
   }
 
+  &__addon-1{
+    position: absolute;
+    left: 55px;
+    top: 10%;
+  }
+
   &__wrapper-section{
     width: 50%;
     position: relative;
 
     &:has(img){
-      @include flex-center;
+      @include flex(center);
     }
 
     img{
+      width: 420px;
+      height: 390px;
       animation: float 6s ease-in-out infinite;
     }
   }

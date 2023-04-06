@@ -70,7 +70,7 @@
   .container { max-width: 720px; }
 
   .about-banner {
-    max-width: 500px;
+    max-width: 820px;
     margin-inline: auto;
   }
 
@@ -106,7 +106,7 @@
     font-size: 1.9rem;
     margin-block-end: 30px;
   }
-  .hero { padding-block-start: 0px; }
+  .hero { padding-block-start: 0; }
 
   .hero .container {
     position: relative;
@@ -399,7 +399,7 @@
   .hero-banner { max-width: max-content; }
   .category .container { padding-inline: 40px; }
   .category-card .card-title { --fs-4: 8rem; }
-  .about { padding-block: 180px 120px; }
+  .about { padding-block: 200px 120px; }
   .service { padding-inline: 70px; }
   .service-card { padding-block: 65px; }
   .portfolio .container, .skills .container { padding-inline: 45px; }

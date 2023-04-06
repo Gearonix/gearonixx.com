@@ -1,5 +1,8 @@
 
+@use './../globals' as *;
+
 .loading {
+  //@include dev-kill-component;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,6 +24,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 100%;
   transform: translate(-50%, -50%);
   transition: var(--transition-2);
 }

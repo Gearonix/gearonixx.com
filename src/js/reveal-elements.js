@@ -17,7 +17,3 @@ const scrollReveal = function() {
 scrollReveal()
 
 window.addEventListener('wheel', scrollReveal)
-
-window.addEventListener('scroll', () => {
-  console.log('scroll')
-})
