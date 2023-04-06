@@ -11,8 +11,10 @@
   },
   "devDependencies": {
     "@types/gulp": "^4.0.10",
+    "browser-sync": "^2.27.11",
     "eslint": "^8.37.0",
     "eslint-config-google": "^0.14.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -28,12 +30,7 @@
     "stylelint-config-standard-scss": "^7.0.1"
   },
   "dependencies": {
-    "browser-sync": "^2.27.11",
-    "del": "^7.0.0",
-    "gulp": "^4.0.2",
     "material-icons": "^1.13.4",
-    "normalize.css": "^8.0.1",
-    "sass": "^1.57.1",
     "smooth-scrollbar": "^8.8.3"
   }
 }
