@@ -1,11 +1,15 @@
 <header class="header" data-header>
   <div class="container">
 
-    <a href="#" class="logo">
+    <a data-href="#home" class="logo">
       <img alt="Richard home" height="40" src="img/logo-dark.png" width="40">
     </a>
 
     <div class="navbar-buttons">
+      <button class="nav-icon-btn" aria-label="open menu">
+        <a data-href="#portfolio"></a>
+        <img src="img/link.svg">
+      </button>
       <button class="nav-icon-btn" aria-label="open menu">
         <a data-href="https://t.me/gearonixx"></a>
         <img src="img/telegram.svg">
@@ -19,57 +23,54 @@
       </button>
     </div>
 
-    <nav class="navbar" data-navbar>
-
-      <div class="navbar-top">
-        <a href="#" class="logo">
-          <img src="img/nav-logo.svg" width="140" height="40" alt="Richard home" class="img">
-        </a>
-
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <span class="span one"></span>
-            <span class="span two"></span>
-          </button>
-
-
-      </div>
-
-      <ul class="navbar-list">
-
-        <li class="navbar-item">
-          <a href="#home" class="navbar-link" data-nav-link>Home</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#gallery" class="navbar-link" data-nav-link>Gallery</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#about" class="navbar-link" data-nav-link>About</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#services" class="navbar-link" data-nav-link>Services</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
-        </li>
-
-        <li class="navbar-item">
-          <a href="#contact" class="navbar-link" data-nav-link>Contact us</a>
-        </li>
-
-      </ul>
-
-      <p class="navbar-text">
-        Urgent issue? call us at
-        <a href="tel:8085613846" class="contact-link">808-561-3846</a>
-      </p>
-
-    </nav>
-
-    <div class="overlay" data-nav-toggler data-overlay></div>
 
   </div>
 </header>
+
+<nav class="navbar" data-navbar>
+
+  <div class="navbar-top">
+    <a data-href="#home" class="logo" data-nav-toggler>
+      <img src="img/logo-dark-big.png" width="180"
+           height="65" alt="Uzhanin Egor" class="img">
+    </a>
+
+    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+      <img src="img/cross.svg">
+    </button>
+
+
+  </div>
+
+  <ul class="navbar-list">
+
+    <li class="navbar-item">
+      <a data-href="#home" class="navbar-link" data-nav-link>Home</a>
+    </li>
+
+    <li class="navbar-item">
+      <a data-href="#about" class="navbar-link" data-nav-link>About</a>
+    </li>
+
+    <li class="navbar-item">
+      <a data-href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+    </li>
+
+    <li class="navbar-item">
+      <a data-href="#contact" class="navbar-link" data-nav-link>Contact me</a>
+    </li>
+
+  </ul>
+  <p class="navbar-title">My Address</p>
+
+  <address class="navbar-text">
+    Mytishchi, Rozhdestvenskaya 3
+  </address>
+  <p class="navbar-title">Contact me</p>
+  <p class="navbar-text">
+    <a data-href="tel:79264942003" class="contact-link">+7 926 494 2003</a>
+  </p>
+
+</nav>
+
+<div class="overlay" data-nav-toggler data-overlay></div>

@@ -13,11 +13,11 @@
 .about .section-title { margin-block-end: 35px; }
 
 .about .section-text {
-  font-size: var(--fs-6);
+  font-size: 2.8rem;
   color: var(--white-a25);
   font-weight: var(--fw-300);
-  line-height: 1.7;
   margin-block-end: 35px;
+  line-height: 1.56;
 }
 
 .about .wrapper::before {
@@ -33,6 +33,9 @@
   color: var(--white);
   font-weight: var(--fw-400);
   text-decoration: underline;
+}
+.about .wrapper{
+  padding-inline-start: 10px;
 }
 
 .about-banner {

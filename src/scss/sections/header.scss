@@ -63,9 +63,9 @@
   height: 100vh;
   max-width: 280px;
   width: 100%;
-  padding: 25px;
+  padding: 22px;
   overflow-y: auto;
-  z-index: 2;
+  z-index: 30;
   transition: 0.25s var(--cubic-out);
   visibility: hidden;
 }
@@ -76,11 +76,18 @@
   transition-duration: 0.5s;
 }
 
-.navbar-top .logo .img { width: 130px; }
+.navbar-top .logo .img { width: 165px; }
 
 .nav-close-btn {
-  width: 25px;
-  height: 25px;
+  width: 21px;
+  height: 21px;
+  transition: 0.2s var(--cubic-in);
+  img{
+    margin-top: -3px;
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .nav-close-btn .span {
@@ -100,6 +107,7 @@
 .navbar-list {
   text-align: center;
   padding-block: 40px;
+  padding-block-end: 50px;
 }
 
 .navbar-link {
@@ -131,14 +139,15 @@
   font-size: var(--fs-8);
   font-weight: var(--fw-500);
   line-height: 1;
-  margin-block-end: 15px;
+  margin-block-end: 7px;
 }
 
 .navbar-text {
   color: var(--white-a75);
-  font-weight: var(--fw-300);
-  line-height: 1.6;
-  margin-block-end: 15px;
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  margin-block-end: 5px;
+  font-size: 1.8rem;
 }
 
 .navbar .contact-link {
@@ -153,7 +162,7 @@
   position: fixed;
   inset: 0;
   background-color: black;
-  z-index: 1;
+  z-index: 25;
   transition: var(--transition-1);
   opacity: 0;
   pointer-events: none;

@@ -10,7 +10,6 @@
     "start": "gulp"
   },
   "devDependencies": {
-    "@types/gulp": "^4.0.10",
     "browser-sync": "^2.27.11",
     "eslint": "^8.37.0",
     "eslint-config-google": "^0.14.0",
