@@ -202,17 +202,25 @@ body.active {
   letter-spacing: 3.5px;
 }
 
-[data-reveal] {
+[data-reveal], [data-fisrt-reveal] {
   transform: translateY(50px);
   opacity: 0;
   transition: 0.7s ease;
 }
 
-[data-reveal="left"] { transform: translate(-50px, 0); }
+[data-reveal="left"], [data-fisrt-reveal="left"] {
+  transform: translate(-50px, 0);
+}
 
-[data-reveal="right"] { transform: translate(50px, 0); }
+[data-reveal="right"], [data-fisrt-reveal="right"] {
+  transform: translate(50px, 0);
+}
 
-[data-reveal].revealed {
+[data-reveal="opacity"], [data-fisrt-reveal="opacity"] {
+  opacity: 1;
+}
+
+[data-reveal].revealed, [data-fisrt-reveal].revealed {
   transform: translate(0, 0);
   opacity: 1;
 }
@@ -320,4 +328,8 @@ body.active {
 
 @keyframes bounceball {
   to { transform: scaleX(1.03) scaleY(0.97); }
+}
+
+a{
+  cursor: pointer;
 }

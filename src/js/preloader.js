@@ -1,5 +1,5 @@
 const loadingElement = document.querySelector('[data-loading]')
-
+const firstRevealed = document.querySelectorAll('[data-fisrt-reveal]')
 
 window.addEventListener('load', function() {
   loadingElement.classList.add('loaded')
@@ -10,10 +10,13 @@ window.addEventListener('load', function() {
     document.body.addEventListener('mouseout', function() {
       cursor.classList.add('disabled')
     })
-
     document.body.addEventListener('mouseover', function() {
       cursor.classList.remove('disabled')
     })
+
+    for (const reveal of firstRevealed) {
+      reveal.classList.add('revealed')
+    }
   }, 1000)
 })
 

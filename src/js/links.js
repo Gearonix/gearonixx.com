@@ -15,8 +15,8 @@ const navigate = (link, attribute) => {
 for (const link of links) {
   const attribute = link.getAttribute('data-href')
   if (!attribute?.startsWith('#')) {
-    link.parentNode.addEventListener('click', () => {
-      window.location.href = link.getAttribute('data-href')
+    link.addEventListener('click', () => {
+      window.open(link.getAttribute('data-href'), '_blank').focus()
     })
     continue
   }

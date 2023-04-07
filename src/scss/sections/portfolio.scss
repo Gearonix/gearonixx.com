@@ -144,11 +144,6 @@
   }
 }
 
-
-.portfolio .container{
-
-}
-
 .portfolio .section-description {
   margin-block-end: 55px;
   margin-top: 20px;
@@ -249,7 +244,7 @@
       opacity: 0.9;
 
       img{
-        @include size;
+        @include size(75%, 75%);
       }
     }
   }
@@ -292,8 +287,8 @@
 
 .card-github{
   border-radius: 100%;
-  width: 53px;
-  height: 53px;
+  width: 45px;
+  height: 45px;
   background: white;
   position: absolute;
   bottom: 40px;
@@ -308,7 +303,7 @@
 
   a{
     @include flex-center;
-    @include size(85%, 85%);
+    @include size(90%, 90%);
   }
 
 }

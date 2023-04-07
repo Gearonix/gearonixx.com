@@ -6,8 +6,11 @@
   &__contacts{
     width: 300px;
     position: absolute;
-    left: -75px;
-    bottom: -225px;
+    left: -95px;
+    bottom: -260px;
+    &.active{
+      display: none;
+    }
   }
 
   &__contact{

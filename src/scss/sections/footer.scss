@@ -51,6 +51,9 @@
   max-width: max-content;
   margin-block-end: 20px;
 }
+.footer-bottom{
+  position: relative;
+}
 
 .social-list {
   display: flex;
@@ -102,4 +105,14 @@
       transform: scale(1.15);
     }
   }
+}
+
+.secret{
+  @include absolute;
+
+  bottom: 0;
+  left: 16px;
+  font-weight: var(--fw-300);
+  opacity: 0.4;
+  font-size: 2rem;
 }

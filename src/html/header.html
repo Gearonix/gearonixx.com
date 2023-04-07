@@ -6,19 +6,16 @@
     </a>
 
     <div class="navbar-buttons">
-      <button class="nav-icon-btn" aria-label="open menu">
-        <a data-href="#portfolio"></a>
+      <button class="nav-icon-btn" aria-label="open menu" data-href="#portfolio">
         <img src="img/link.svg">
       </button>
-      <button class="nav-icon-btn" aria-label="open menu">
-        <a data-href="https://t.me/gearonixx"></a>
+      <button class="nav-icon-btn" aria-label="open menu" data-href="https://t.me/gearonixx">
         <img src="img/telegram.svg">
       </button>
-      <button class="nav-icon-btn" aria-label="open menu">
-        <a data-href="https://github.com/Gearonix"></a>
+      <button class="nav-icon-btn" aria-label="open menu" data-href="https://github.com/Gearonix">
         <img src="img/github.svg">
       </button>
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-open>
         <span class="material-icons">more_horiz</span>
       </button>
     </div>
@@ -30,12 +27,12 @@
 <nav class="navbar" data-navbar>
 
   <div class="navbar-top">
-    <a data-href="#home" class="logo" data-nav-toggler>
+    <a data-href="#home" class="logo" data-nav-close>
       <img src="img/logo-dark-big.png" width="180"
            height="65" alt="Uzhanin Egor" class="img">
     </a>
 
-    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+    <button class="nav-close-btn" aria-label="close menu" data-nav-close>
       <img src="img/cross.svg">
     </button>
 
@@ -45,19 +42,19 @@
   <ul class="navbar-list">
 
     <li class="navbar-item">
-      <a data-href="#home" class="navbar-link" data-nav-link>Home</a>
+      <a data-href="#home" class="navbar-link" data-nav-close>Home</a>
     </li>
 
     <li class="navbar-item">
-      <a data-href="#about" class="navbar-link" data-nav-link>About</a>
+      <a data-href="#about" class="navbar-link" data-nav-close>About</a>
     </li>
 
     <li class="navbar-item">
-      <a data-href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+      <a data-href="#portfolio" class="navbar-link" data-nav-close>Portfolio</a>
     </li>
 
     <li class="navbar-item">
-      <a data-href="#contact" class="navbar-link" data-nav-link>Contact me</a>
+      <a data-href="#contact" class="navbar-link" data-nav-close>Contact me</a>
     </li>
 
   </ul>
@@ -73,4 +70,4 @@
 
 </nav>
 
-<div class="overlay" data-nav-toggler data-overlay></div>
+<div class="overlay" data-nav-close data-overlay></div>

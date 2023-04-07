@@ -45,7 +45,7 @@
   }
   .category-item { max-width: 235px; }
 
-  .footer-bottom { padding-block-end: 40px; }
+  .footer-bottom { padding-block-end: 20px; }
 
   .footer-bottom .container {
     display: grid;
@@ -122,9 +122,8 @@
 
   .hero-banner {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 100px;
-    transform: translateY(-50%);
     max-width: 200px;
     z-index: -1;
     border-radius: 100%;
@@ -281,7 +280,7 @@
     transition: transform 0.35s;
     pointer-events: none;
     z-index: 6;
-    border: 4px solid var(--radical-red);
+    border: 4px solid black;
   }
   .cursor.hovered { transform: translate(-50%, -50%) scale(1.2); }
   .cursor.disabled { transform: translate(-50%, -50%) scale(0); }
