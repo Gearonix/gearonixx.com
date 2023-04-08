@@ -1,0 +1,26 @@
+@use './../globals' as *;
+
+.back-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: -70px;
+  width: 70px;
+  height: 70px;
+  border: 1px dashed currentcolor;
+  color: var(--radical-red);
+  font-size: var(--fs-11);
+  border-radius: var(--radius-circle);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity var(--transition-2);
+  z-index: 3;
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.back-top-btn.show {
+  opacity: 1;
+}
+

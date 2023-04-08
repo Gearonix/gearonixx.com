@@ -8,15 +8,16 @@
   <title>Uzhanin Egor</title>
   <meta name="title" content="Uzhanin Egor">
   <meta name="description" content="Web developer.">
-  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="font/font.css">
+  <link rel="shortcut icon" href="favicon.ico" type='image/x-icon'>
+  <link rel="stylesheet" href="_static/font/font.css">
+  <link rel="stylesheet" href="_static/index.min.css">
 </head>
 
 <body class="active" id="top">
   <div id="root">
     @@include('html/preloader.html')
     @@include('html/header.html')
+    @@include('html/navbar.html')
     <main>
       <article>
         @@include('html/main.html')
@@ -30,7 +31,7 @@
 
     <div class="cursor disabled" data-cursor></div>
   </div>
-  <script src="smooth-scrollbar.js"></script>
-  <script src="index.js"></script>
+  <script src="_static/lib/smooth-scrollbar.js"></script>
+  <script src="_static/index.min.js"></script>
 </body>
 </html>

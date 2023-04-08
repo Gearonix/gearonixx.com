@@ -1,6 +1,6 @@
 @use './../globals' as *;
 
-.hero {
+.main {
   text-align: center;
 
   &__contacts{
@@ -8,6 +8,7 @@
     position: absolute;
     left: -95px;
     bottom: -260px;
+
     &.active{
       display: none;
     }
@@ -39,122 +40,52 @@
     &:hover{
       transform: scale(1.02);
     }
-
-  }
-}
-
-.hero-banner {
-  max-width: 150px;
-  margin-inline: auto;
-  margin-block-end: 20px;
-  border-radius: 100%;
-}
-
-.hero .wrapper {
-  position: relative;
-  text-align: left;
-  height: 1.2em;
-  margin-block: 10px 25px;
-}
-
-.hero .wrapper .strong {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: inherit;
-  display: flex;
-}
-
-.hero-text {
-  font-size: var(--fs-10);
-  font-weight: var(--fw-300);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: var(--white-a25);
-}
-
-.hero .wrapper .space { padding: 0.1em; }
-
-.hero .wrapper :is(.in, .out) {
-  opacity: 0;
-  transform: scaleY(0);
-}
-
-.hero .strong.active .out {
-  opacity: 1;
-  transform: scaleY(1);
-  animation: text-wave 0.2s ease reverse forwards;
-}
-
-.hero .wrapper .in { animation: text-wave 0.2s ease forwards; }
-
-@keyframes text-wave {
-  0% {
-    opacity: 0;
-    transform: scaleY(0);
   }
 
-  100% {
+  &__banner {
+    max-width: 150px;
+    margin-inline: auto;
+    margin-block-end: 20px;
+    border-radius: 100%;
+  }
+
+  .wrapper {
+    position: relative;
+    text-align: left;
+    height: 1.2em;
+    margin-block: 10px 25px;
+
+    .strong {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: inherit;
+      display: flex;
+    }
+    .space { padding: 0.1em; }
+
+    :is(.in, .out) {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+
+    .in {
+      animation: text-wave 0.2s ease forwards;
+    }
+  }
+
+  &__text {
+    font-size: var(--fs-10);
+    font-weight: var(--fw-300);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--white-a25);
+  }
+
+  .strong.active .out {
     opacity: 1;
     transform: scaleY(1);
+    animation: text-wave 0.2s ease reverse forwards;
   }
-}
-
-.eye-wrapper{
-  width: 95px;
-  height: 95px;
-  animation: bounceball alternate infinite 400ms 40ms ease-in-out;
-  background-color: white;
-  box-shadow:inset -5px -5px 5px rgb(0 0 0 / 7%);
-  border-radius: 50%;
-  transition: opacity 0.3s var(--cubic-in);
-  opacity: 1;
-}
-
-.eye-wrapper.closed{
-  opacity: 0;
-}
-
-.eye {
-  overflow: hidden;
-
-  @include size;
-
-  position: relative;
-}
-
-.eye-iris {
-  width: 40%;
-  height: 40%;
-  left: 18%;
-  top: 18%;
-  border-radius: 50%;
-  background-color: #3b8be5;
-  position: absolute;
-}
-
-.eye-lens{
-  @include absolute-center;
-
-  width: 30%;
-  height: 30%;
-  background: black;
-  border-radius: 100%;
-}
-
-
-.eye-iris::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  top: 22%;
-  left: 20%;
-  background-color: rgb(255 255 255 / 43%);
-}
-
-@keyframes bounceball {
-  to { transform: scaleX(1.03) scaleY(0.97); }
 }

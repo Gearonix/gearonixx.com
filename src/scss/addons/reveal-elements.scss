@@ -1,0 +1,25 @@
+@use './../globals' as *;
+
+
+[data-reveal], [data-first-reveal] {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+[data-reveal="left"], [data-first-reveal="left"] {
+  transform: translate(-50px, 0);
+}
+
+[data-reveal="right"], [data-first-reveal="right"] {
+  transform: translate(50px, 0);
+}
+
+[data-reveal="opacity"], [data-first-reveal="opacity"] {
+  opacity: 1;
+}
+
+[data-reveal].revealed, [data-first-reveal].revealed {
+  transform: translate(0, 0);
+  opacity: 1;
+}

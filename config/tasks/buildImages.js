@@ -1,10 +1,17 @@
 const gulp = require('gulp')
 const paths = require('./../paths')
+const imagemin = require('gulp-imagemin')
 
 const buildImages = () => {
-  return gulp.src(`${paths.src}/assets/img/**`)
-      .pipe(gulp.dest(`${paths.dist}/img`))
+  return gulp.src(paths.images.src)
+      // .pipe(imagemin())
+      .pipe(gulp.dest(paths.images.dist))
+}
+
+const buildFavicon = () => {
+  return gulp.src(paths.favicon.src)
+      .pipe(gulp.dest(paths.favicon.dist))
 }
 
 
-module.exports = buildImages
+module.exports = gulp.series(buildImages, buildFavicon)

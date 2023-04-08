@@ -10,165 +10,41 @@
   transition: padding-block var(--transition-2),
   box-shadow var(--transition-2),background-color var(--transition-2);
   z-index: 4;
-}
 
-.nav-open-btn{
-  @include icon-button(33px);
+  &__buttons{
+    @include flex;
 
-  height: 32px;
-}
-
-.navbar-buttons{
-  @include flex;
-
-  gap: 25px;
-}
-
-.nav-icon-btn{
-  @include size(32px, 32px);
-
-  transition: var(--transition-1) 0.2s;
-
-  img{
-    @include size(90%, 90%);
+    gap: 25px;
   }
 
-  a{
-    position: absolute;
+  &__btn{
+    @include size(32px, 32px);
+
+    transition: var(--transition-1) 0.2s;
+
+    img{
+      @include size(90%, 90%);
+    }
+
+    a{
+      position: absolute;
+    }
+
+    &:hover{
+      transform: scale(1.12);
+    }
   }
 
-  &:hover{
-    transform: scale(1.12);
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
 }
 
 .header.active {
   background-color: var(--eerie-black);
   padding-block: 12px;
   box-shadow: var(--shadow);
-}
-
-.header .container,
-.navbar-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  right: -280px;
-  background-color: var(--eerie-black);
-  height: 100vh;
-  max-width: 280px;
-  width: 100%;
-  padding: 22px;
-  overflow-y: auto;
-  z-index: 30;
-  transition: 0.25s var(--cubic-out);
-  visibility: hidden;
-}
-
-.navbar.active {
-  visibility: visible;
-  transform: translateX(-280px);
-  transition-duration: 0.5s;
-}
-
-.navbar-top .logo .img { width: 165px; }
-
-.nav-close-btn {
-  width: 21px;
-  height: 21px;
-  transition: 0.2s var(--cubic-in);
-  img{
-    margin-top: -3px;
-  }
-  &:hover{
-    transform: scale(1.1);
-  }
-}
-
-.nav-close-btn .span {
-  background-color: var(--white-a80);
-  width: 25px;
-  height: 3px;
-  border-radius: 5px;
-  transition: var(--transition-1);
-}
-
-.nav-close-btn .one { transform: rotate(45deg) translate(2px, 2px); }
-
-.nav-close-btn .two { transform: rotate(-45deg); }
-
-.nav-close-btn:is(:hover, :focus-visible) .span { background-color: var(--radical-red); }
-
-.navbar-list {
-  text-align: center;
-  padding-block: 40px;
-  padding-block-end: 50px;
-}
-
-.navbar-link {
-  font-size: var(--fs-7);
-  font-weight: var(--fw-400);
-  padding-block: 2px;
-  text-transform: capitalize;
-  transition: var(--transition-1);
-}
-
-.navbar-link:is(:hover, :focus-visible) { color: var(--radical-red); }
-
-.login-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  background-color: var(--radical-red);
-  color: var(--white);
-  padding: 8px 30px;
-  border-radius: var(--radius-5);
-  margin-block-end: 50px;
-}
-
-.login-btn .span { font-weight: var(--fw-500); }
-
-.navbar-title {
-  font-size: var(--fs-8);
-  font-weight: var(--fw-500);
-  line-height: 1;
-  margin-block-end: 7px;
-}
-
-.navbar-text {
-  color: var(--white-a75);
-  font-weight: var(--fw-400);
-  line-height: 1.5;
-  margin-block-end: 5px;
-  font-size: 1.8rem;
-}
-
-.navbar .contact-link {
-  color: var(--radical-red);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-400);
-}
-
-.navbar .contact-link:is(:hover, :focus-visible) { text-decoration: underline; }
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background-color: black;
-  z-index: 25;
-  transition: var(--transition-1);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.overlay.active {
-  opacity: 0.65;
-  pointer-events: all;
 }

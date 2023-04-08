@@ -1,62 +1,47 @@
 @use './../globals' as *;
 
-@keyframes align-float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-25%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .portfolio {
   padding-block-end: 0;
 
-  &__addon-1{
+  &__addon-eye {
     position: absolute;
     left: 55px;
     top: 10%;
   }
 
-  &__addon-2{
+  &__addon-guy {
     position: absolute;
     left: 38%;
     top: 0;
 
-    img{
+    img {
       width: 256px;
       height: 263px;
     }
 
     animation: float 6s ease-in-out infinite;
-
   }
-}
 
-.portfolio-card-block{
-  width: 30%;
-  position: relative;
+  &__card-block {
+    width: 30%;
+    position: relative;
 
-  @include flex(stretch, flex-end, column);
+    @include flex(stretch, flex-end, column);
+  }
 
-  .portfolio-card-subtitle{
+  &__card-subtitle {
     font-family: var(--ff-recoleta);
     font-size: 1.8rem;
     color: var(--radical-red);
   }
 
-  .portfolio-card-title{
+  &__card-title {
     font-size: 2.6rem;
     margin-top: -10px;
     font-weight: var(--fw-400);
   }
 
-  .portfolio-card-description{
+  &__card-description {
     width: 500px;
     height: max-content;
     padding: 18px;
@@ -71,21 +56,21 @@
     box-shadow: 4px 4px 23px 0 rgb(34 60 80 / 20%);
     transition: var(--transition-1) .1s;
 
-    &:hover{
+    &:hover {
       transform: scale(1.02);
       cursor: pointer;
     }
 
-    em{
+    em {
       text-decoration: underline;
     }
 
-    a{
+    a {
       position: absolute;
     }
   }
 
-  .portfolio-card-time{
+  &__card-time {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -93,16 +78,16 @@
     right: 14px;
     bottom: 10px;
 
-    img{
+    img {
       @include size(20px, 20px);
     }
 
-    span{
+    span {
       font-family: var(--ff-recoleta);
     }
   }
 
-  .portfolio-card-tags{
+  &__card-tags {
     @include flex;
 
     flex-wrap: wrap;
@@ -111,12 +96,12 @@
     row-gap: -3px;
     width: 490px;
 
-    span{
+    span {
       font-size: 1.65rem;
     }
   }
 
-  .portfolio-card-icons{
+  &__card-icons {
     width: 100%;
     height: 27px;
     margin-top: 15px;
@@ -127,183 +112,145 @@
     margin-right: 20px;
     animation: align-float 4s ease-in-out infinite;
 
-    img{
+    img {
       @include size(27px, 27px);
 
       cursor: pointer;
       transition: var(--cubic-out) 0.3s;
 
-      &:hover{
+      &:hover {
         transform: scale(1.1);
       }
     }
 
-    a{
+    a {
       position: absolute;
     }
   }
-}
 
-.portfolio .section-description {
-  margin-block-end: 55px;
-  margin-top: 20px;
-  line-height: 1.4;
-  font-size: var(--fs-6)
-}
-
-
-.portfolio-card {
-  position: relative;
-  margin-block-end: 50px;
-  width: 58%;
-}
-
-.portfolio-card :is(.card-content, .btn-icon) {
-  position: absolute;
-  z-index: 1;
-}
-
-.portfolio-card .card-content {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 15px;
-}
-
-.portfolio-card .card-tag {
-  color: var(--white-a70);
-  font-weight: var(--fw-300);
-}
-
-.portfolio-card .btn-icon {
-  top: 20px;
-  right: 20px;
-  width: 45px;
-  height: 45px;
-
-  --hover-bg-color: var(--radical-red);
-  --hover-text-color: var(--white);
-}
-
-.portfolio-card .btn-icon svg { width: 20px; }
-
-.portfolio-card .card-title:is(:hover, :focus) { text-decoration: underline; }
-
-
-.btn-icon{
-  background-color: white !important;
-}
-
-.portfolio-wrapper{
-  @include flex(space-between);
-
-  width: 100%;
-  gap: 50px;
-  margin: 75px auto 0;
-}
-
-.portfolio-wrapper.to-left{
-  .portfolio-card-block{
-    @include flex(streth, flex-start, column);
+  .section-description {
+    margin-block-end: 55px;
+    margin-top: 20px;
+    line-height: 1.4;
+    font-size: var(--fs-6)
   }
-}
 
-.portfolio-card.adonis-ecommerce{
-  background-image: url('img/adonis-ecommerce.png');
-}
+  &__card {
+    position: relative;
+    margin-block-end: 50px;
+    width: 58%;
 
-.portfolio-card.space-calendar{
-  background-image: url('img/space-calendar.png');
-}
-
-.portfolio-card-description{
-
-}
-
-.portfolio-card{
-  transition: var(--cubic-out) 0.15s;
-  cursor: pointer;
-  height: 488px;
-  background-size: cover;
-  border-radius: 3px;
-
-  &:hover{
-    transform: translate(0, 0) scale(0.93) !important;
-
-    .card-image-background{
-      opacity: 0.5;
+    &:is(.card-content, .btn-icon) {
+      position: absolute;
+      z-index: 1;
     }
+  }
 
-    .card-text{
-      transform: translate(-50%, -50%);
-      opacity: 1;
+  &__wrapper {
+    @include flex(space-between);
+
+    width: 100%;
+    gap: 50px;
+    margin: 75px auto 0;
+  }
+
+  &__wrapper.to-left {
+    .portfolio__card-block {
+      @include flex(streth, flex-start, column);
     }
+  }
 
-    .card-github{
-      transform: translate(0);
-      opacity: 0.9;
+  &__card.adonis-ecommerce {
+    background-image: url('images/projects/adonis-ecommerce.png');
+  }
 
-      img{
-        @include size(75%, 75%);
+  &__card.space-calendar {
+    background-image: url('images/projects/space-calendar.png');
+  }
+
+  &__card {
+    cursor: pointer;
+    height: 488px;
+    background-size: cover;
+    border-radius: 3px;
+
+    &:hover {
+      transform: translate(0, 0) scale(0.93) !important;
+
+      .portfolio__card-background {
+        opacity: 0.5;
+      }
+
+      .portfolio__card-text {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+
+      .portfolio__card-github {
+        opacity: 0.9;
       }
     }
   }
-}
 
-.card-image-background{
-  @include absolute;
-  @include size;
+  &__card-background {
+    @include absolute;
+    @include size;
 
-  background-color: black;
-  opacity: 0;
-  transition: var(--cubic-out) 0.5s;
-  border-radius: 6px;
-}
-
-.card-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  width: max-content;
-  opacity: 0;
-  transform: translate(-70%, -50%);
-  transition: var(--cubic-out) 0.3s;
-  z-index: 1;
-  color: var(--smokey-black);
-  font-family: var(--ff-recoleta);
-
-
-  h3{
-    font-weight: var(--fw-300);
-    font-size: 2em;
+    background-color: black;
+    opacity: 0;
+    transition: var(--cubic-out) 0.5s;
+    border-radius: 6px;
   }
 
-  p{
-    font-weight: var(--fw-300);
-    font-size: 1.5em;
+  &__card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: max-content;
+    opacity: 0;
+    transform: translate(-70%, -50%);
+    transition: var(--cubic-out) 0.3s;
+    z-index: 1;
+    color: var(--smokey-black);
+    font-family: var(--ff-recoleta);
+
+
+    h3 {
+      font-weight: var(--fw-300);
+      font-size: 2em;
+    }
+
+    p {
+      font-weight: var(--fw-300);
+      font-size: 1.5em;
+    }
   }
-}
 
-.card-github{
-  border-radius: 100%;
-  width: 45px;
-  height: 45px;
-  background: white;
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  overflow: hidden;
+  &__card-github {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    background: white;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    overflow: hidden;
 
-  @include flex-center;
+    img {
+      @include size(75%, 75%);
+    }
 
-  transition: var(--cubic-out) 0.3s;
-  opacity: 0;
-  transform: translate(20%);
-
-  a{
     @include flex-center;
-    @include size(90%, 90%);
-  }
 
+    transition: var(--cubic-out) 0.3s;
+    opacity: 0;
+    transform: translate(20%);
+
+    a {
+      @include flex-center;
+      @include size(90%, 90%);
+    }
+
+  }
 }

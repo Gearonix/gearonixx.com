@@ -1,17 +1,15 @@
 const gulp = require('gulp')
 const include = require('gulp-file-include')
-const htmlmin = require('gulp-htmlmin')
 const paths = require('./../paths')
+const htmlminify = require('gulp-html-minify')
 
 const minifyHtml = () => {
-  return gulp.src(`${paths.src}/**.html`)
+  return gulp.src(paths.html.src)
       .pipe(include({
         prefix: '@@'
       }))
-      .pipe(htmlmin({
-        collapseWhiteSpace: true
-      }))
-      .pipe(gulp.dest(paths.dist))
+      .pipe(htmlminify())
+      .pipe(gulp.dest(paths.html.dist))
 }
 
 

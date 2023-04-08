@@ -1,0 +1,55 @@
+@use './../globals' as *;
+
+.eye{
+  width: 95px;
+  height: 95px;
+  animation: bounceball alternate infinite 400ms 40ms ease-in-out;
+  background-color: white;
+  box-shadow:inset -5px -5px 5px rgb(0 0 0 / 7%);
+  border-radius: 50%;
+  transition: opacity 0.3s var(--cubic-in);
+  opacity: 1;
+
+  &__wrapper {
+    overflow: hidden;
+
+    @include size;
+
+    position: relative;
+  }
+
+  &__iris {
+    width: 40%;
+    height: 40%;
+    left: 18%;
+    top: 18%;
+    border-radius: 50%;
+    background-color: #3b8be5;
+    position: absolute;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 22%;
+      left: 20%;
+      background-color: rgb(255 255 255 / 43%);
+    }
+  }
+
+  &__lens{
+    @include absolute-center;
+
+    width: 30%;
+    height: 30%;
+    background: black;
+    border-radius: 100%;
+  }
+
+}
+
+.eye.closed{
+  opacity: 0;
+}

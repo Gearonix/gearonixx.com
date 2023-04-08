@@ -1,29 +1,13 @@
 @use './../globals' as *;
 
-
-@keyframes float {
-  0% {
-    transform: translate(-50%, -50%) scale(1.15);
-  }
-
-  50% {
-    transform: translate(-65%, -50%) scale(1.15);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1.15);
-  }
-}
-
-
-.skills .container{
-  padding-bottom: 60px;
-  border-bottom: 1px solid var(--white-a80);
-}
-
 .skills{
   padding-top: 0;
   padding-bottom: 0;
+
+  .container{
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--white-a80);
+  }
 
   &__wrapper{
     width: 100%;
@@ -34,7 +18,7 @@
     margin-top: 20px;
   }
 
-  &__addon-1{
+  &__addon-eye{
     position: absolute;
     left: 55px;
     top: 10%;

@@ -1,38 +1,36 @@
-
-
-const initScrollbar = () => {
-  if (window.Scrollbar.getAll()[0]) {
-    return
-  }
-
-  const options = {
-    damping: 0.05,
-    alwaysShowTracks: true,
-    syncCallbacks: true }
-
-  const scrollbar = window.Scrollbar.init(document.querySelector('#root'), options)
-
-  const header = document.querySelector('[data-header]')
-  const backTopBtn = document.querySelector('[data-back-top-btn]')
-
-  scrollbar.addListener(({ offset }) => {
-    if (offset.y > 50) {
-      header.classList.add('active')
-      backTopBtn.style.top = offset.y + scrollbar.bounding.bottom - 100 + 'px'
-      backTopBtn.style.right = '40px'
-    } else {
-      header.classList.remove('active')
+const scrollbarApi = {
+  subscribers: [],
+  init() {
+    if (this.get()) {
+      return
     }
-    header.style.top = offset.y + 'px'
-    header.style.left = offset.x + 'px'
-    document.body.dispatchEvent(new MouseEvent('mousemove'))
-    window.dispatchEvent(new MouseEvent('wheel'))
-  })
 
-  return scrollbar
-}
+    const options = {
+      damping: 0.05,
+      alwaysShowTracks: true,
+      syncCallbacks: true
+    }
 
+    const scrollbar = window.Scrollbar.init(document.querySelector('#root'), options)
 
-const getScrolbar = () => {
-  return window.Scrollbar.getAll()[0]
+    scrollbar.addListener(() => {
+      document.body.dispatchEvent(new MouseEvent('mousemove'))
+      window.dispatchEvent(new MouseEvent('wheel'))
+    })
+
+    for (const subscriber of this.subscribers) {
+      subscriber(scrollbar)
+    }
+
+    return scrollbar
+  },
+  get() {
+    return window.Scrollbar.getAll()[0]
+  },
+  destroy() {
+    window.Scrollbar.destroy(document.querySelector('#root'))
+  },
+  subscribe(callback) {
+    this.subscribers.push(callback)
+  }
 }

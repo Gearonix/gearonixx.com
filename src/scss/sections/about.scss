@@ -1,54 +1,51 @@
 @use './../globals' as *;
 
-.about .container {
-  display: grid;
-  gap: 45px;
-}
+.about {
+  .container{
+    display: grid;
+    gap: 45px;
+  }
 
+  .wrapper, .about__banner{
+    padding-inline-start: 45px;
+  }
 
+  .section-title{
+    margin-block-end: 35px;
+  }
 
-.about .wrapper,
-.about-banner { padding-inline-start: 45px; }
+  .section-text{
+    font-size: 2.8rem;
+    color: var(--white-a25);
+    font-weight: var(--fw-300);
+    margin-block-end: 35px;
+    line-height: 1.56;
+  }
 
-.about .section-title { margin-block-end: 35px; }
+  .wrapper {
+    padding-inline-start: 10px;
 
-.about .section-text {
-  font-size: 2.8rem;
-  color: var(--white-a25);
-  font-weight: var(--fw-300);
-  margin-block-end: 35px;
-  line-height: 1.56;
-}
+    &::before{
+      top: 10px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+    }
+  }
 
-.about .wrapper::before {
-  top: 10px;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 20px;
-  height: 20px;
-}
+  .section-text{
+    .em{
+      color: var(--white);
+      font-weight: var(--fw-400);
+      text-decoration: underline;
+    }
+  }
 
-.about .section-text .em {
-  color: var(--white);
-  font-weight: var(--fw-400);
-  text-decoration: underline;
-}
-.about .wrapper{
-  padding-inline-start: 10px;
-}
-
-.about-banner {
-  position: relative;
-  margin-top: 60px;
-  animation: float 6s ease-in-out infinite;
-}
-
-.about .shape-1 {
-  display: block;
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  z-index: 1;
-  width: 100px;
+  &__banner{
+    position: relative;
+    margin-top: 60px;
+    animation: float 6s ease-in-out infinite;
+  }
 }

@@ -4,19 +4,17 @@ const csso = require('gulp-csso')
 const concat = require('gulp-concat')
 const paths = require('./../paths')
 const sass = require('gulp-sass')(require('sass'))
-const tildeImporter = require('node-sass-tilde-importer')
+const cleanCSS = require('gulp-clean-css')
+
 
 const minifyScss = () => {
-  return gulp.src([`${paths.src}/scss/globals.scss`,
-    `${paths.src}/scss/sections/**`,
-    `${paths.src}/scss/media-queries.scss`])
-      .pipe(sass({
-        importer: tildeImporter
-      }))
+  return gulp.src(paths.scss.src)
+      .pipe(sass())
       .pipe(autoprefixer({ cascade: false }))
       .pipe(csso())
-      .pipe(concat('index.css'))
-      .pipe(gulp.dest(paths.dist))
+      .pipe(concat('index.min.css'))
+      .pipe(cleanCSS())
+      .pipe(gulp.dest(paths.scss.dist))
 }
 
 
