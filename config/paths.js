@@ -1,8 +1,9 @@
 module.exports = {
   src: 'src',
   dist: 'dist',
+  public: 'public',
   font: {
-    src: 'src/assets/font/**',
+    src: 'public/assets/font/**',
     dist: 'dist/_static/font'
   },
   html: {
@@ -11,21 +12,20 @@ module.exports = {
   },
   javascript: {
     src: [
-      'src/js/dom.js',
-      'src/js/init-scrollbar.js',
-      'src/js/sections/**.js',
-      'src/js/effects/**.js'
+      'src/globals/scripts/**.js',
+      'src/sections/**/*.js',
+      'src/addons/**/*.js'
     ],
     dist: 'dist/_static',
     fileName: 'index.min.js'
   },
   scss: {
     src: [
-      'src/scss/globals.scss',
-      'src/scss/keyframes.scss',
-      'src/scss/addons/**',
-      'src/scss/sections/**',
-      'src/scss/media-queries.scss'
+      'src/globals/scss/globals.scss',
+      'src/globals/scss/keyframes.scss',
+      'src/addons/**/*.scss',
+      'src/sections/**/*.scss',
+      'src/globals/scss/media-queries.scss'
     ],
     fileName: 'index.min.css',
     dist: 'dist/_static'
@@ -37,11 +37,11 @@ module.exports = {
     dist: 'dist/_static/lib'
   },
   images: {
-    src: 'src/assets/img/**',
+    src: 'public/assets/img/**',
     dist: 'dist/_static/images'
   },
   favicon: {
-    src: 'src/favicon.ico',
+    src: 'public/favicon.ico',
     dist: 'dist/_static'
   }
 }

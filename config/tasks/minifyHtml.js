@@ -6,7 +6,8 @@ const htmlminify = require('gulp-html-minify')
 const minifyHtml = () => {
   return gulp.src(paths.html.src)
       .pipe(include({
-        prefix: '@@'
+        prefix: '@@',
+        basepath: 'src/sections'
       }))
       .pipe(htmlminify())
       .pipe(gulp.dest(paths.html.dist))
