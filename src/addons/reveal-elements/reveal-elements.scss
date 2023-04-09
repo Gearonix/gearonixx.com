@@ -7,6 +7,10 @@
   transition: 0.7s ease;
 }
 
+[data-first-reveal] {
+  transition: 0.4s ease;
+}
+
 [data-reveal="left"], [data-first-reveal="left"] {
   transform: translate(-50px, 0);
 }

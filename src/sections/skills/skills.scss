@@ -1,5 +1,9 @@
 @use '../../globals/scss/globals' as *;
 
+.section.skills{
+  padding-block: 0;
+}
+
 .skills{
   padding-top: 0;
   padding-bottom: 0;
@@ -25,14 +29,17 @@
   }
 
   &__wrapper-section{
-    width: 50%;
+    width: 100%;
     position: relative;
 
     &:has(img){
       @include flex(center);
+
+      display: none;
     }
 
     img{
+      display: none;
       width: 420px;
       height: 390px;
       animation: float 6s ease-in-out infinite;
@@ -41,36 +48,36 @@
 
   &__wrapper-title{
     color: var(--white-a25);
-    font-weight: var(--fw-300);
-    font-size: 2.25em;
+    font-weight: var(--fw-400);
+    font-size: 2.25rem;
+    margin-bottom: 10px;
   }
 
   &__wrapper-block{
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 
     @include flex;
 
-    gap: 15px;
     flex-wrap: wrap;
     width: 100%;
+    gap: 7px;
   }
 
   &__wrapper-icon{
     border: 1px solid var(--white-a50);
-    border-radius: 6px;
-    padding-left: 5px;
-    padding-right: 5px;
     box-sizing: border-box;
     height: 28px;
-    width: max-content;
-    min-width: 109px;
     background: white;
 
     @include flex-center;
 
-    font-size: 1.1em;
     transition: var(--transition-1) 0.1s;
+    border-radius: 0;
+    width: 45%;
+    padding: 15px;
+    font-size: 1.65rem;
+
 
     &:hover{
       transform: scale(1.05);

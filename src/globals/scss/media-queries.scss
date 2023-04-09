@@ -1,6 +1,8 @@
+@use './globals' as *;
+
 @media (min-width: 575px) {
   :root {
-    --section-padding: 80px;
+    --section-padding: 55px;
   }
 
   .container {
@@ -29,6 +31,7 @@
       margin: 0;
     }
   }
+
 
   .copyright,
   .footer__social-list {
@@ -180,9 +183,81 @@
   .header .container { padding-inline: 35px; }
   .main .container { max-width: 1250px; }
 
-  .main{
+  .section.main{
     padding-block: 170px 150px;
+  }
 
+  .footer{
+    .secret{
+      display: block;
+    }
+
+    &__icon-wrapper{
+      width: 337px;
+    }
+
+    &__icon{
+      @include size(52px, 52px);
+    }
+
+    &__top, .section-title{
+      margin-block: 20px 90px;
+      line-height: normal;
+    }
+  }
+
+  .main{
+    &__contacts{
+      display: block;
+    }
+  }
+
+  .header {
+    padding-block: 18px;
+
+    &__buttons {
+      gap: 25px;
+    }
+
+    &__btn {
+      @include size(32px, 32px);
+    }
+
+    .logo{
+      img{
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+  }
+
+  .navbar{
+    &__top .logo .img{
+      width: 165px;
+    }
+
+    &__close{
+      width: 21px;
+      height: 21px;
+    }
+
+    &__links {
+      padding-block-start: 40px;
+      padding-block-end: 50px;
+    }
+
+    &__bottom-text {
+      font-size: 1.8rem;
+      margin-block-end: 20px;
+    }
+
+    &__contact-link{
+      font-size: var(--fs-6);
+    }
+  }
+
+  .main{
     .wrapper {
       --fs-2: 10rem;
 
@@ -205,6 +280,103 @@
     }
   }
 
+  .section-description{
+    display: block;
+    font-size: 2.6rem;
+  }
+
+  .skills{
+    &__wrapper-icon{
+      border-radius: 6px;
+      padding: 0 5px;
+      width: 130px;
+    }
+
+    &__wrapper-block{
+      justify-content: flex-start;
+      margin-bottom: 25px;
+      gap: 15px;
+    }
+
+    &__wrapper-title{
+      font-size: 2.6rem;
+    }
+
+
+    &__wrapper-section{
+      &:has(img){
+        display: flex;
+      }
+
+      width: 50%;
+
+      img{
+        display: block;
+      }
+    }
+  }
+
+  .portfolio{
+    &__wrapper{
+      @include flex(space-between);
+    }
+
+    &__card{
+      display: block;
+    }
+
+    &__card-block{
+      box-shadow: none;
+    }
+
+    &__card-description{
+      box-shadow: 4px 4px 23px 0 rgb(34 60 80 / 20%);
+      padding: 18px;
+      font-size: 1.7rem;
+      width: 500px;
+      margin-bottom: 0;
+    }
+
+    &__card-time{
+      display: flex;
+    }
+
+    &__card-tags{
+      margin-top: 10px;
+      column-gap: 12px;
+      row-gap: -3px;
+      width: 490px;
+
+      span{
+        font-size: 1.65rem;
+      }
+    }
+
+    &__card-icons{
+      gap: 20px;
+      animation: align-float 4s ease-in-out infinite;
+
+      img{
+        @include size(27px, 27px);
+      }
+    }
+
+    &__wrapper{
+      .portfolio__card-block {
+        @include flex(stretch, flex-end, column);
+      }
+    }
+
+    &__card-subtitle {
+      font-size: 1.8rem;
+    }
+
+    &__card-title{
+      font-size: 2.6rem;
+    }
+
+  }
+
   .about{
     .container {
       gap: 120px;
@@ -212,6 +384,12 @@
 
     .section-title {
       margin-block-end: 40px;
+    }
+
+    &__banner{
+      margin-top: 60px;
+      padding-inline-start: 45px;
+      width: 100%;
     }
 
     .wrapper{
@@ -227,12 +405,21 @@
       --fs-6: 2.8rem;
 
       margin-block-end: 50px;
+      line-height: 1.56;
     }
+  }
+
+  .eye{
+    display: block;
   }
 
   .portfolio{
     &__list {
       column-gap: 90px;
+    }
+
+    &__addon-guy {
+      display: block;
     }
 
     &__card{

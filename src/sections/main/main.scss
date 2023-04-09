@@ -1,9 +1,14 @@
 @use '../../globals/scss/globals' as *;
 
+.section.main{
+  padding-block: 120px 60px;
+}
+
 .main {
   text-align: center;
 
   &__contacts{
+    display: none;
     width: 300px;
     position: absolute;
     left: -95px;

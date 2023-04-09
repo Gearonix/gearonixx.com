@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 18px;
+  padding-block: 12px;
   transition: padding-block var(--transition-2),
   box-shadow var(--transition-2),background-color var(--transition-2);
   z-index: 4;
@@ -14,11 +14,18 @@
   &__buttons{
     @include flex;
 
-    gap: 25px;
+    gap: 19px;
+  }
+
+  .logo{
+    img{
+      width: 35px;
+      height: 35px;
+    }
   }
 
   &__btn{
-    @include size(32px, 32px);
+    @include size(28px, 28px);
 
     transition: var(--transition-1) 0.2s;
 

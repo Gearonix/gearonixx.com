@@ -10,10 +10,12 @@ const scrollbarApi = {
       alwaysShowTracks: true,
       syncCallbacks: true
     }
-
     const scrollbar = window.Scrollbar.init(document.querySelector('#root'), options)
 
-    scrollbar.addListener(() => {
+    scrollbar.addListener(({ offset }) => {
+      if (offset.x > 0) {
+        scrollbar.scrollTo(0)
+      }
       document.body.dispatchEvent(new MouseEvent('mousemove'))
       window.dispatchEvent(new MouseEvent('wheel'))
     })

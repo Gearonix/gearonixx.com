@@ -1,6 +1,7 @@
 @use '../../globals/scss/globals' as *;
 
 .eye{
+  display: none;
   width: 95px;
   height: 95px;
   animation: bounceball alternate infinite 400ms 40ms ease-in-out;

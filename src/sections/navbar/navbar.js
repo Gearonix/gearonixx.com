@@ -6,7 +6,6 @@ const initNavbar = () => {
 
   const openNav = function() {
     scrollbarApi.destroy()
-    dom.destroy(cursor)
     dom.destroy(header)
     dom.addClass(navbar, 'active')
     dom.addClass(header, 'active')
@@ -18,7 +17,6 @@ const initNavbar = () => {
   const closeNav = function() {
     scrollbarApi.init()
     dom.init(header)
-    dom.init(cursor)
     dom.removeClass(navbar, 'active')
     dom.removeClass(overlay, 'active')
     dom.removeClass(document.body, 'active')

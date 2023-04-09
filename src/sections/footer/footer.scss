@@ -14,7 +14,7 @@
   }
 
   &__top, .section-title{
-    margin-block: 20px 90px;
+    margin-block: 20px 60px;
     line-height: normal;
   }
 
@@ -65,15 +65,14 @@
   }
 
   &__icon-wrapper{
-    max-width: 367px;
-
     @include flex(space-around);
 
     margin: 0 auto;
+    width: 267px;
   }
 
   &__icon{
-    @include size(52px, 52px);
+    @include size(43px, 43px);
 
     border: 1px solid var(--white-a25);
     cursor: pointer;
@@ -98,12 +97,15 @@
   }
 
   .secret{
+    display: none;
+    height: 20px;
+
     @include absolute;
 
-    bottom: 0;
+    bottom: -20px;
     left: 16px;
     font-weight: var(--fw-300);
     opacity: 0.4;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }

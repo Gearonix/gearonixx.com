@@ -20,13 +20,13 @@
     align-items: center;
 
     .logo .img{
-      width: 165px;
+      width: 140px;
     }
   }
 
   &__close {
-    width: 21px;
-    height: 21px;
+    width: 17px;
+    height: 17px;
     transition: 0.2s var(--cubic-in);
 
     img{
@@ -40,8 +40,8 @@
 
   &__links {
     text-align: center;
-    padding-block: 40px;
-    padding-block-end: 50px;
+    padding-block-start: 21px;
+    padding-block-end: 38px;
   }
 
   &__link {
@@ -67,13 +67,14 @@
     color: var(--white-a75);
     font-weight: var(--fw-400);
     line-height: 1.5;
-    margin-block-end: 5px;
-    font-size: 1.8rem;
+    margin-block-end: 20px;
+    width: 70%;
+    font-size: 1.75rem;
   }
 
   &__contact-link {
     color: var(--radical-red);
-    font-size: var(--fs-6);
+    font-size: 1.9rem;
     font-weight: var(--fw-400);
 
     &:is(:hover, :focus-visible) {
