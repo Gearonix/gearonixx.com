@@ -5,7 +5,7 @@ const initLinks = () => {
 
     if (!attribute?.startsWith('#')) {
       return dom.event(link, () => {
-        window.open(attribute, '_blank').focus()
+        window.open(attribute, '_blank')?.focus?.()
       })
     }
 

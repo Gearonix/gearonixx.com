@@ -2,7 +2,6 @@
 @use '../../globals/scss/globals' as *;
 
 .loading {
-  //@include dev-kill-component;
   position: fixed;
   top: 0;
   left: 0;

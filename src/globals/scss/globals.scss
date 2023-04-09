@@ -103,7 +103,9 @@ body.active {
 
 .shape { display: none; }
 
-.section { padding-block: var(--section-padding); }
+.section {
+  padding-block: var(--section-padding);
+}
 
 .h1,
 .h2,

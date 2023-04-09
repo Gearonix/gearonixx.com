@@ -1,6 +1,7 @@
 @use '../../globals/scss/globals' as *;
 
 .back-top-btn {
+  display: none;
   position: fixed;
   bottom: 30px;
   right: -70px;
@@ -10,7 +11,6 @@
   color: var(--radical-red);
   font-size: var(--fs-11);
   border-radius: var(--radius-circle);
-  display: grid;
   place-items: center;
   opacity: 0;
   transition: opacity var(--transition-2);

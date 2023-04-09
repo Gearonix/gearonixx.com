@@ -12,16 +12,16 @@ const initEyeRotation = () => {
   }
 
   dom.event(document.body, () => {
-    dom.elementLoop('[data-eyes]', (elem) => {
+    dom.elementLoop('[data-eye]', (elem) => {
       elem.style.transform = `rotate(${calculateEyeDeg(elem)}deg)`
     })
   }, 'mousemove')
 
-  dom.events('[data-eyes]', (e, target) => {
+  dom.events('[data-eye]', (e, target) => {
     dom.addClass(target.parentNode, 'closed')
   }, 'mouseover')
 
-  dom.events('[data-eyes]', (e, target) => {
+  dom.events('[data-eye]', (e, target) => {
     dom.removeClass(target.parentNode, 'closed')
   }, 'mouseout')
 }
