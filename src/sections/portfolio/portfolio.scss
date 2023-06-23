@@ -171,6 +171,10 @@
     background-image: url('images/projects/space-calendar.png');
   }
 
+  &__card.ulbi-production {
+    background-image: url('images/projects/ulbi-production.png');
+  }
+
   &__card {
     display: none;
     position: relative;
@@ -185,7 +189,7 @@
     cursor: pointer;
     height: 388px;
     background-size: cover;
-    border-radius: 3px;
+    border-radius: 6px;
 
     &:hover {
       transform: translate(0, 0) scale(0.93) !important;
@@ -251,7 +255,7 @@
     overflow: hidden;
 
     img {
-      @include size(75%, 75%);
+      @include size(67%, 67%);
     }
 
     @include flex-center;

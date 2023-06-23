@@ -499,16 +499,15 @@
 
 @media (min-width: 1400px) {
   :root {
-    --fs-1: 13rem;
-    --fs-2: 8.5rem;
+    --fs-1: 11.2rem;
+    --fs-2: 7.2rem;
     --fs-3: 8rem;
   }
   .container { max-width: 1320px; }
   :is(.header, .gallery, .category, .portfolio, .skills) .container { max-width: 1580px; }
   .header .container { padding-inline: 60px; }
-  .main .container { max-width: 1500px; }
+  .main .container { max-width: 1400px; }
   .main__content { margin-inline-end: 400px; }
-  .main .wrapper { --fs-2: 13rem; }
   .main__text { --fs-10: 2.4rem; }
   .main__banner { max-width: max-content; }
   .category .container { padding-inline: 40px; }

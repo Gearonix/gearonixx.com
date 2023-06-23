@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "1.1",
   "description": "",
   "main": "index.js",
   "keywords": [],
@@ -23,12 +23,12 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
+    "gulp-dart-sass": "^1.1.0",
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-minify": "^3.1.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^5.1.0",
     "sass": "^1.60.0",
     "stylelint": "^15.4.0",
     "stylelint-config-standard-scss": "^7.0.1"

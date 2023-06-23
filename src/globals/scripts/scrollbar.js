@@ -8,14 +8,16 @@ const scrollbarApi = {
     const options = {
       damping: 0.05,
       alwaysShowTracks: true,
-      syncCallbacks: true
+      syncCallbacks: true,
+      plugins: {
+        disableScroll: {
+          direction: 'x'
+        }
+      }
     }
     const scrollbar = window.Scrollbar.init(document.querySelector('#root'), options)
 
-    scrollbar.addListener(({ offset }) => {
-      if (offset.x > 0) {
-        scrollbar.scrollTo(0)
-      }
+    scrollbar.addListener(() => {
       document.body.dispatchEvent(new MouseEvent('mousemove'))
       window.dispatchEvent(new MouseEvent('wheel'))
     })

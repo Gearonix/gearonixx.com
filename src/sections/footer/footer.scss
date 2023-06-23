@@ -32,11 +32,12 @@
 
   &__bottom{
     position: relative;
+    padding-bottom: 20px;
 
     .logo{
       margin-inline: auto;
       max-width: max-content;
-      margin-block-end: 20px;
+      margin-block-end: 25px;
     }
   }
 
@@ -94,18 +95,5 @@
     &:hover{
       transform: scale(1.15);
     }
-  }
-
-  .secret{
-    display: none;
-    height: 20px;
-
-    @include absolute;
-
-    bottom: -20px;
-    left: 16px;
-    font-weight: var(--fw-300);
-    opacity: 0.4;
-    font-size: 1.7rem;
   }
 }
