@@ -4,7 +4,7 @@ const imagemin = require('gulp-imagemin')
 
 const buildImages = () => {
   return gulp.src(paths.images.src)
-      .pipe(imagemin())
+      // .pipe(imagemin())
       .pipe(gulp.dest(paths.images.dist))
 }
 

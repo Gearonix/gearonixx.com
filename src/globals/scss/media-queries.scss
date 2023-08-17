@@ -80,10 +80,8 @@
   .container { max-width: 720px; }
 
   .about__banner {
-    max-width: 210px;
+    max-width: 459px;
     margin-inline: auto;
-    border-radius: 33% 0;
-    overflow: hidden;
   }
 }
 
@@ -98,11 +96,6 @@
       .strong {
         left: 40%;
       }
-    }
-  }
-  .about {
-    &__banner {
-      display: block;
     }
   }
 
@@ -318,10 +311,6 @@
 
   .back-top-btn{
     display: grid;
-  }
-
-  .about__banner {
-    max-width: 330px;
   }
 
   .container { max-width: 1140px; }
