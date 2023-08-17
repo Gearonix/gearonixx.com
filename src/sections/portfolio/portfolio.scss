@@ -179,6 +179,10 @@
     background-image: url('images/projects/code-gear.png');
   }
 
+  &__card.commercial-projects {
+    background-image: url('images/projects/commercial-projects.png');
+  }
+
   &__card {
     display: none;
     position: relative;
