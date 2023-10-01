@@ -9,6 +9,13 @@ const minifyScss = require('./config/tasks/minifyScss')
 const minifyJs = require('./config/tasks/minifyJs')
 const buildFont = require('./config/tasks/buildFont')
 const buildImages = require('./config/tasks/buildImages')
+const fs = require('fs')
+const { resolve } = require('path')
+
+
+if (!fs.existsSync(resolve(__dirname, paths.dist))) {
+  fs.mkdirSync(resolve(__dirname, paths.dist))
+}
 
 const build = gulp.series(clear, minifyScss,
     minifyJs, buildImages, minifyHtml, buildFont)
