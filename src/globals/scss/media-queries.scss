@@ -10,7 +10,7 @@
     width: 100%;
     margin-inline: auto;
   }
-  :is(.header, .gallery, .category, .portfolio) .container { max-width: unset; }
+  //:is(.header, .gallery, .category, .portfolio) .container { max-width: unset; }
 
   .navbar {
     max-width: 350px;
@@ -55,7 +55,7 @@
     &__wrapper-icon{
       border-radius: 6px;
       padding: 0 5px;
-      width: 130px;
+      width: 160px;
     }
 
     &__wrapper-block{
@@ -99,7 +99,19 @@
     }
   }
 
+  .portfolio__grid {
+    display: grid;
+  }
+
+  .portfolio__card-block.additional {
+    margin-top: 0;
+    .portfolio__card-description {
+      height: 238px;
+    }
+  }
+
   .skills{
+    display: none;
     &__wrapper-section{
       &:has(img){
         display: flex;
@@ -110,6 +122,12 @@
       img{
         display: block;
       }
+    }
+  }
+
+  .navbar {
+    &__link.skills {
+      display: none;
     }
   }
 
@@ -184,7 +202,7 @@
   }
 
   .section { position: relative; }
-  .container { max-width: 960px; }
+  .container { max-width: 1060px; }
 
   .header { padding-block: 30px; }
 
@@ -303,7 +321,7 @@
 @media (min-width: 1200px) {
   :root {
     --fs-1: 10rem;
-    --fs-2: 9rem;
+    --fs-2: 8rem;
     --fs-3: 6.8rem;
     --fs-4: 3.6rem;
     --fs-6: 2.6rem;
@@ -313,13 +331,18 @@
     display: grid;
   }
 
-  .container { max-width: 1140px; }
+  .container { max-width: 1218px; }
   .header .container { padding-inline: 35px; }
   .main .container { max-width: 1250px; }
 
   .section.main{
     padding-block: 170px 150px;
   }
+
+  .portfolio__card-block.additional {
+    width: 100% !important;
+  }
+
 
   .footer{
     .secret{
@@ -335,7 +358,7 @@
     }
 
     &__top, .section-title{
-      margin-block: 20px 90px;
+      margin-block: 25px 90px;
       line-height: normal;
     }
   }
@@ -488,7 +511,7 @@
     }
   }
 
-  .footer__top { padding-block: 300px; }
+  .footer__top { padding-block: 250px; }
 
   .footer__top .section-title {
     --fs-2: 8rem;
@@ -500,7 +523,7 @@
 @media (min-width: 1400px) {
   :root {
     --fs-1: 11.2rem;
-    --fs-2: 7.2rem;
+    --fs-2: 6.85rem;
     --fs-3: 8rem;
   }
   .container { max-width: 1320px; }
@@ -553,13 +576,18 @@
     &__addon-eye {
       position: absolute;
       left: 55px;
-      top: 10%;
+      top: 2%;
     }
   }
 
   .skills__addon-eye{
+      display: block;
       position: absolute;
       left: 55px;
       top: 10%;
+  }
+
+  .portfolio__card-block.additional {
+    animation: float 6s ease-in-out infinite;
   }
 }

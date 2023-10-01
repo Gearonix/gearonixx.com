@@ -4,15 +4,13 @@
   padding-block-end: 0;
 
   &__addon-eye {
-    position: absolute;
-    right: 100px;
-    top: 10%;
+    display: none;
   }
 
   &__addon-guy {
     position: absolute;
     display: none;
-    left: 38%;
+    left: 55%;
     top: 0;
 
     img {
@@ -44,6 +42,10 @@
 
   &__card-subtitle.library {
     color: #eb40f5;
+  }
+
+  &__card-subtitle.changes {
+    color: #ff8c00;
   }
 
   &__card-title {
@@ -81,6 +83,10 @@
 
     a {
       position: absolute;
+    }
+
+    p {
+      margin-bottom: 20px;
     }
   }
 
@@ -144,7 +150,7 @@
   }
 
   .section-description {
-    margin-block-end: 55px;
+    margin-block-end: 28px;
     margin-top: 20px;
     line-height: 1.4;
     font-size: var(--fs-6)
@@ -160,8 +166,7 @@
     width: 100%;
     gap: 50px;
 
-    //margin: 75px auto 0;
-    margin: 45px auto 0;
+    margin: 22px auto 0;
 
   }
 
@@ -296,4 +301,27 @@
     }
 
   }
+
+  &__grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-column-gap: 8%;
+  }
+
+  .portfolio__card-block.additional {
+    min-width: 412px;
+    width: 100%;
+    align-items: flex-end;
+    margin: 0 auto;
+    margin-top: 15px;
+    .portfolio__card-description {
+      width: 90%;
+      height: max-content;
+    }
+  }
+
+  .portfolio__card-block.additional.to-left {
+    align-items: flex-start;
+  }
+
 }

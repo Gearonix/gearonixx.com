@@ -2,7 +2,7 @@
 gearonixx.com
 </h1>
 <p align="center">
-    💫 Portfolio-website created with plain HTML, SCSS, Javascript and Gulp 💫
+    💫 My personal website created with plain HTML, SCSS, Javascript and Gulp 💫
 <p>
 <br/>
 

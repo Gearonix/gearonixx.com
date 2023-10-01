@@ -42,6 +42,6 @@ const serve = () => {
 
 gulp.task('build', buildPipeline)
 
-gulp.task('default', serve)
+gulp.task('default', gulp.series(buildPipeline, serve))
 
 
