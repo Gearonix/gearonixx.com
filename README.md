@@ -1,6 +1,15 @@
-# Portfolio (Uzhanin Egor)
-Мое портфолио, созданное с помощью HTML, SCSS, Javascript и Gulp
+<h1 align="center">
+gearonixx.com
+</h1>
+<p align="center">
+    💫 Portfolio-website created with plain HTML, SCSS, Javascript and Gulp 💫
+<p>
+<br/>
 
-https://gearonixx.com
+## [👋 Live demo here](https://gearonixx.com)
 
-[![My Skills](https://skillicons.dev/icons?i=html,scss,js,gulp)](https://skillicons.dev)
+---
+
+> **Warning**
+> I'm going to rewrite the project in preact and typescript, <br/>
+> it may soon become irrelevant
