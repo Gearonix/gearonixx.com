@@ -31,7 +31,8 @@
     "gulp-plumber": "^1.2.1",
     "sass": "^1.60.0",
     "stylelint": "^15.4.0",
-    "stylelint-config-standard-scss": "^7.0.1"
+    "stylelint-config-standard-scss": "^7.0.1",
+    "zip-folder": "^1.0.0"
   },
   "dependencies": {
     "smooth-scrollbar": "^8.8.3"
