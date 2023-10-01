@@ -36,6 +36,14 @@
     font-family: var(--ff-recoleta);
     font-size: 1.4rem;
     color: var(--radical-red);
+    span {
+      color: #ea1b4e;
+      display: inline;
+    }
+  }
+
+  &__card-subtitle.library {
+    color: #eb40f5;
   }
 
   &__card-title {
@@ -179,6 +187,14 @@
     background-image: url('images/projects/code-gear.png');
   }
 
+  &__card.pixel-playground {
+    background-image: url('images/projects/pixel-playground.png');
+  }
+
+  &__card.grnx-utils {
+    background-image: url('images/projects/grnx-utils.png');
+  }
+
   &__card.commercial-projects {
     background-image: url('images/projects/commercial-projects.png');
   }
@@ -188,6 +204,7 @@
     position: relative;
     margin-block-end: 50px;
     width: 671px;
+    box-shadow: 4px 4px 23px 0 rgb(34 60 80 / 20%);
 
     &:is(.card-content, .btn-icon) {
       position: absolute;
@@ -204,7 +221,7 @@
       transform: translate(0, 0) scale(0.93) !important;
 
       .portfolio__card-background {
-        opacity: 0.5;
+        opacity: 0.45;
       }
 
       .portfolio__card-text {

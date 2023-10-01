@@ -28,7 +28,7 @@ const serve = () => {
   })
 
   gulp
-      .watch(`${paths.src}/**`, build)
+      .watch([`${paths.src}/**`, `${paths.public}/**`], build)
       .on('change', () => setTimeout(sync.reload, 1000))
 }
 
