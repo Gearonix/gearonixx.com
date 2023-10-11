@@ -286,7 +286,7 @@
 
     .abs-img-1 {
       width: 17%;
-      top: 16%;
+      top: -10%;
       left: 10%;
     }
 
@@ -347,6 +347,11 @@
   .footer{
     .secret{
       display: block;
+    }
+
+
+    .abs-img-1 {
+      top: 10%;
     }
 
     &__icon-wrapper{
